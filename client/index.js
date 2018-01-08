@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import store from './store'
+import store from './store';
+
+// assuming our index.scss is in the same directory as our index.js
+import '../public/style.css';
 
 ReactDOM.render(
   <Provider store={store}>
