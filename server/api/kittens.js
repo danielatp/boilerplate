@@ -1,6 +1,6 @@
 //Routes for '/api/kittens'
 
-const kittenRouter = require('express').Router;
+const kittenRouter = require('express').Router();
 
 kittenRouter.get('/', (req, res, next) => {
   res.status(200).send()

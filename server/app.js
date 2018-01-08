@@ -8,13 +8,13 @@ const index = path.join(__dirname, '../public')
 const app = express();
 
 app.use(morgan('dev'));
-app.use(express.static(index)));
+app.use(express.static(index));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use('/', router);
 
 app.get('*', (req, res, next) => {
-  res.sendFile(index));
+  res.sendFile(index);
 });
 
 app.use((err, req, res, next) => {
