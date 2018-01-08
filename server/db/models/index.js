@@ -7,4 +7,4 @@ const Kittens = require('./kittens');
 Users.hasMany(Kittens);
 Kittens.belongsTo(Users);
 
-module.exports = db;
+module.exports = {db, Kittens, Users};
