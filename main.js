@@ -1,7 +1,10 @@
-const app = require('./server/app.js')
+const app = require('./server/app.js');
+const db = require('./server/db/models');
 const PORT = process.env.PORT || 1337;
 
-app.listen(PORT, () => {
-  console.log("listening on port" , PORT);
+db.sync({force: true})
+.then(() => {
+  app.listen(PORT, () => {
+    console.log("listening on port" , PORT);
+  });
 });
-
